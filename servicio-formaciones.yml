@@ -4,8 +4,6 @@ spring:
   mvc:
     pathmatch: 
       matching-strategy: ant-path-matcher
-  application:
-    name: servicio-formaciones
 eureka:
   instance:
     instance-id: ${random.value}:${spring.application.name}

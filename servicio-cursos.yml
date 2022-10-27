@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:5501/curso_spring
+    username: admin
+    password: admin
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+        implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+  application:
+    name: servicio-cursos
+server:
+  port: 8080
+eureka:
+  instance:
+    instance-id: ${random.value}:${spring.application.name}
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://db:5501/curso_spring
+    url: jdbc:mysql://db:3306/curso_spring
     username: admin
     password: admin
   jpa:
